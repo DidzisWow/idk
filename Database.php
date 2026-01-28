@@ -11,7 +11,12 @@ class Database {
     
 }
 
-    public function query($sql) {
-        return $this->pdo->query($sql);
+    
+    
+    public function query($sql, $params = []) {
+        $statement = $this->pdo->prepare($sql);
+        $statement->execute($params);
+
+        return $statement;
     }
 }
