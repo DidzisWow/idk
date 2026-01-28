@@ -19,6 +19,7 @@ echo "<h1>Blogs</h1>";
 echo "<form>";
 echo "<input name ='search_query' />";
 echo "<button>Meklet</button>";
+echo "<a href='http://mnk.test/catagories.php'>Skatīt kategorijas</a>";
 echo "</form>";
 
 
