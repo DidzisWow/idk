@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+<header> 
+  <nav>
+    <ul>
+            <li><a href="/">Emulara ieraksti</a></li>
+            <li><a href="/story.php">Par mums</a></li>
+   </ul>
+  </nav>
+</header>
+
     <h1>Emuārs</h1>
 
      <form>
