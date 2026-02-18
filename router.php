@@ -7,7 +7,7 @@ if ($uri === "/") {
 } elseif ($uri === "/about") {
     require "controlers/story.php";
 } elseif ($uri === "/categories") {
-    require "catagories.php";
+    require "controlers/categories.php";
 } else {
     http_response_code(404);
     echo "<p>Atvainojiet, lapa netika atrasta!</p>";
