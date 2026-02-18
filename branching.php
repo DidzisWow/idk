@@ -23,5 +23,3 @@
     <?php } ?>
 </ul>
  <?php } ?>
-</body>
-</html>

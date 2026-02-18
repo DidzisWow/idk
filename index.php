@@ -3,40 +3,6 @@
 require_once "functions.php";
 require_once "Database.php";
 $config = require "config.php";
-
 $db = new Database($config["database"]);
-$sql_query = "SELECT * FROM posts"; $params = [];
-$params = [];
 
-if (isset($_GET["search_query"]) && trim($_GET["search_query"]) !== "") { 
-$sql_query .= " WHERE content LIKE :search"; 
-$params["search"] = "%" . trim($_GET["search_query"]) . "%"; 
-}
-
-$posts = $db->query($sql_query, $params)->fetchAll(PDO::FETCH_ASSOC);
-
-require "./skatos/index.view.php";
-
-echo "<h1>Blogs</h1>";
-
-echo "<form>";
-echo "<input name ='search_query' />";
-echo "<button>Meklet</button>";
-echo "<a href='http://mnk.test/catagories.php'>Skatīt kategorijas</a>";
-echo "</form>";
-
-
-echo "<ul>";
-    foreach($posts as $post) {
-        echo "<li>" . $post["content"] . "</li>";
-    }
-echo "</ul>"
-;
-
-
-
-
-
-
-
-
+require "router.php";
