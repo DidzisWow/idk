@@ -5,9 +5,11 @@
 
 <form method="POST">
     <label>
-        <input name="content" />
+        <input name="content" value="<?= $_POST['content'] ?? '' ?>" />
     </label>
-
+    <?php if (isset($errors["content"])) { ?>
+        <p style="color: red;"><?= $errors["content"] ?></p>
+    <?php } ?>
     
     <button type="submit">Izveidot</button>
 </form>
