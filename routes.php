@@ -8,5 +8,7 @@ return [
 
 "/about" => "controllers/story.php",
 
-"/create" => "controllers/posts/create.php"
+"/create" => "controllers/posts/create.php",
+
+"/edit" => "controllers/posts/edit.php"
 ];

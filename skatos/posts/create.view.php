@@ -1,17 +1,13 @@
 <?php require "./skatos/components/header.php"; ?>
 <?php require "./skatos/components/navbar.php"; ?>
 
-<h1>Izveidot bloga ierakstu</h1>
+<form method="post" action="">
+    <input type="hidden" name="id" value="">
 
-<form method="POST">
-    <label>
-        <input name="content" value="<?= $_POST['content'] ?? '' ?>" />
-    </label>
-    <?php if (isset($errors["content"])) { ?>
-        <p style="color: red;"><?= $errors["content"] ?></p>
-    <?php } ?>
-    
-    <button type="submit">Izveidot</button>
+    <label for="content">Saturs:</label>
+    <textarea id="content" name="content"></textarea>
+
+    <button type="submit">Saglabāt</button>
 </form>
 
 <?php require "./skatos/components/footer.php"; ?>
